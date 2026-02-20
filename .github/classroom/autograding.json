@@ -1,0 +1,294 @@
+{
+  "tests": [
+    {
+      "name": "Test a (encode a.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/a.txt output && cmp output tests/a.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test a (decode a.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/a.a85 output && cmp output tests/a.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test aa (encode aa.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/aa.txt output && cmp output tests/aa.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test aa (decode aa.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/aa.a85 output && cmp output tests/aa.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test aaa (encode aaa.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/aaa.txt output && cmp output tests/aaa.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test aaa (decode aaa.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/aaa.a85 output && cmp output tests/aaa.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test aaaa (encode aaaa.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/aaaa.txt output && cmp output tests/aaaa.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test aaaa (decode aaaaa.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/aaaa.a85 output && cmp output tests/aaaa.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 1 (encode ex1.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/ex1.txt output && cmp output tests/ex1.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 2 (decode ex1.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/ex1.a85 output && cmp output tests/ex1.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 3 (encode ex2.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/ex2.txt output && cmp output tests/ex2.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 4 (decode ex2.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/ex2.a85 output && cmp output tests/ex2.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 5 (encode ex3.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/ex3.txt output && cmp output tests/ex3.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 6 (decode ex3.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/ex3.a85 output && cmp output tests/ex3.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 7 (encode ex4.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/ex4.txt output && cmp output tests/ex4.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 8 (decode ex4.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/ex4.a85 output && cmp output tests/ex4.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 9 (encode ex5.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/ex5.txt output && cmp output tests/ex5.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 10 (decode ex5.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/ex5.a85 output && cmp output tests/ex5.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 11 (encode ex6.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/ex6.txt output && cmp output tests/ex6.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 12 (decode ex6.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/ex6.a85 output && cmp output tests/ex6.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 13 (encode ex7.txt)",
+      "setup": "",
+      "run": "./ascii85 -e tests/ex7.txt output && cmp output tests/ex7.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 14 (decode ex7.a85)",
+      "setup": "",
+      "run": "./ascii85 -d tests/ex7.a85 output && cmp output tests/ex7.txt",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 15 (encode malevich1b)",
+      "setup": "",
+      "run": "./ascii85 -e tests/malevich1b.bmp output && cmp output tests/malevich1b.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 16 (decode malevich1b)",
+      "setup": "",
+      "run": "./ascii85 -d tests/malevich1b.a85 output && cmp output tests/malevich1b.bmp",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 17 (encode dzeta1)",
+      "setup": "",
+      "run": "./ascii85 -e tests/dzeta1.jpg output && cmp output tests/dzeta1.a85",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 18 (decode dzeta1)",
+      "setup": "",
+      "run": "./ascii85 -d tests/dzeta1.a85 output && cmp output tests/dzeta1.jpg",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 19 (decode malevich24b)",
+      "setup": "",
+      "run": "./ascii85 -d tests/malevich24b.a85 output && cmp output tests/malevich24b.bmp",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 10 (encode/decode malevich24b)",
+      "setup": "",
+      "run": "./ascii85 -e tests/malevich24b.bmp output.a85 && ./ascii85 -d output.a85 output && cmp output tests/malevich24b.bmp",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "Test 21 (encode/decode piit-not-fiit)",
+      "setup": "",
+      "run": "./ascii85 -e tests/piit-not-fiit.jpg output.a85 && ./ascii85 -d output.a85 output && cmp output tests/piit-not-fiit.jpg",
+      "input": "",
+      "output": "",
+      "comparison": "include",
+      "timeout": 1,
+      "points": 1
+    }
+  ]
+}
