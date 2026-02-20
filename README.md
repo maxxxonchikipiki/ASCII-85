@@ -1,3 +1,4 @@
+![Workflow Status](https://github.com/maxxxonchikipiki/ASCII-85/actions/workflows/github-classroom-workflow.yml/badge.svg)
 # ASCII85
 
 При передаче бинарных данных по существующим протоколам, предназначенным исключительно для передачи текста (например, почтновые протоколы), возникает потребность в кодировании данных текстом. 
