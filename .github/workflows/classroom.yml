@@ -1,0 +1,50 @@
+name: GitHub Classroom Workflow
+
+on: 
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - '.github/*'
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  Checking-Solution:
+    runs-on: gtest
+    timeout-minutes: 5
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v4
+      - name: Build
+        run: |
+             !(grep -qwRE --include=*.{cc,cpp,h} '<vector>|<list>|<algorithm>|<stack>|<queue>|<deque>|<set>|<map>|<string>|<bits' ./* ) &&  (echo \"Build...\" )  || ( echo \"Forbiden STL containers\" && exit 9 )
+             clang++ -pedantic-errors -std=c++20 ascii85.cpp -o ascii85
+      - name: Autograding
+        uses: amcp-pit/autograding@v1
+      - name: Memory leaks (encode)
+        run: |
+             valgrind --tool=memcheck --leak-check=full --undef-value-errors=no --error-exitcode=111 ./ascii85 -e tests/piit-not-fiit.jpg output.a85 
+      - name: Memory leaks (decode)
+        run: |
+             valgrind --tool=memcheck --leak-check=full --undef-value-errors=no --error-exitcode=111 ./ascii85 -d tests/piit-not-fiit.a85 output 
+      - name: Code linting
+        uses: amcp-pit/cpp-linter@v1
+        with:
+          extra-args-before: '-xc++'
+          extra-args: '-std=c++20'
+          after-args: '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: CPD
+        uses: amcp-pit/cpd-action@v1
+        id: cpd
+        with:
+          repository: ${{ github.repository }}
+          collection: ${{ github.repository_owner  }}
+      - name: Clean
+        run: |
+             rm -rf ./* || true
+             rm -rf ./.??* || true
