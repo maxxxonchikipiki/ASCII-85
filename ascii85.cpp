@@ -55,19 +55,13 @@ static void encode(std::ifstream& in, std::ofstream& out) {
                 tmp /= 85;
             }
 
-            int output_chars = 5;
-            int valid_chars = (n == 4) ? 5 : static_cast<int>(n) + 1;
-
+            int output_chars = (n == 4) ? 5 : static_cast<int>(n) + 1;
             for (int i = 0; i < output_chars; ++i) {
                 if (line_len >= 75) {
                     out.put('\n');
                     line_len = 0;
                 }
-                if (i >= valid_chars) {
-                    out.put('u');
-                } else {
-                    out.put(block[i]);
-                }
+                out.put(block[i]);
                 ++line_len;
             }
         }
@@ -163,7 +157,7 @@ static void decode(std::ifstream& in, std::ofstream& out) {
             static_cast<uint8_t>(word)
         };
 
-        out.write(reinterpret_cast<const char*>(outb), pos);
+        out.write(reinterpret_cast<const char*>(outb), pos - 1);
     }
 }
 
