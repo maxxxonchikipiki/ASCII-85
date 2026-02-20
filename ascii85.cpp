@@ -146,7 +146,6 @@ static void decode(std::ifstream& in, std::ofstream& out) {
         }
 
         uint32_t word = 0;
-        
         for (int i = 0; i < 5; ++i) {
             word = word * 85 + static_cast<uint32_t>(static_cast<unsigned char>(buf[i]));
         }
